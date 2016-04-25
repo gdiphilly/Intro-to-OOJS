@@ -1,420 +1,599 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<title>girldevelopit-reveal.js - The GDI HTML Presentation Framework</title>
+	<title>Intro to Object-Oriented JavaScript - Girl Develop It Philly</title>
 
-		<meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
-		<meta name="author" content="Girl Develop It">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/gdisunny.css" id="theme">
+	<link rel="stylesheet" href="css/theme/styles.css">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+	<!-- For syntax highlighting -->
+	<!-- light editor--><link rel="stylesheet" href="lib/css/light.css">
+	<!-- dark editor<link rel="stylesheet" href="lib/css/dark.css">-->
 
-		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-		
-		<link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+	<!-- If use the PDF print sheet so students can print slides-->
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+	<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+	<link rel="icon" type="image/x-icon" href="css/images/favicon.ico" />
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
 
-		<!-- If use the PDF print sheet so students can print slides-->
-		
-		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+<body>
 
-	<body>
+<div class="reveal">
 
-		<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+	<!-- Introduction -->
+	<section>
+		<h3>Intro to Object-Oriented JavaScript</h3>
+		<div>Slides: http://bit.ly/gdi-oojs</div>
+		<img src="css/images/gdi_logo_badge.png" alt="Girl Develop It" style='height: 250px; width: 250px; border: 0px;'>
+<br/>
+		<div style='align: center;'>"Object-oriented programming is programming <br/>oriented towards objects." - my coworker</div>
+	</section>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-        <!-- Opening -->
-				<section>
-					<h1>GDI Reveal.js</h1>
-                    <!-- <img src="img/circle-gdi-logo.png" alt="GDI Logo"/> -->
-					<h3>Girl Develop It's Framework for HTML Presentations</h3>
-					<p>
-						<small>Found at <a href ="http://github.com/girldevelopit/reveal.js">Girl Develop It reveal.js fork</a>.</small>
-					</p>
-					<p>
-						<small>Original Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-        <!-- Compatibility-->
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.</p>
-						
-						<p>We highly recommend using Chrome, currently, however, the latest version of Safari, mobile Safari (iPad), Firefox and IE9 will work.
-					</p>
-				</section>
-				
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-				
-				<!-- Examples of basic html based slides -->
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-                
-                <section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-                    <p>P.S. This won't work when running the slides locally unless you run reveal.js runs from a local web server.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-				
-				<!-- Examples of code slides-->
-				<section>
-					  <h2>But wait! We teach code</h2>
-					  <p>For HTML -- Surround your code with a div class "xml", then pre, then code.</p>
-           <pre>
-            <code>
-              &lt;ul>
-                &lt;li>No order here&lt;/li>
-                &lt;li>Or here&lt;/li>
-                &lt;li>Or here&lt;/li>
-                &lt;li>Or here&lt;/li>
-              &lt;/ul&gt;
-            </code>
-          </pre>
-				</section>
-				
-				<section>
-					  <h2>But wait! We teach code</h2>
-					  <p>We can also make code editable</p>
-					  <pre>
-					    <code contenteditable>
-                &lt;ul>
-                  &lt;li>No order here&lt;/li>
-                  &lt;li>Or here&lt;/li>
-                  &lt;li>Or here&lt;/li>
-                  &lt;li>Or here&lt;/li>
-                &lt;/ul&gt;
-              </code>
-
-            </pre>
-				</section>
-				
-				
-				<section>
-					  <h2>But wait! We teach code</h2>
-					  <p>CSS</p>
-					  <pre>
-              <code contenteditable class ="css">
-                body{
-                  background-color: #ffffff;
-                }
-              </code>
-            </pre>
-				</section>
-				
-				<section>
-					  <h2>But wait! We teach code</h2>
-					  <p>Javascript</p>
-					  <pre>
-              <code contenteditable class ="javascript">
-                function helloWorld(){
-                  var name = 'GDI';
-                  alert("Hi, " + name)
-                }
-              </code>
-            </pre>
-				</section>
-				
-				<section>
-					  <h2>But wait! We teach code</h2>
-					  <p>PHP</p>
-					  <pre>
-              <code contenteditable class ="php">
-                function helloWorld(){
-                  $name = 'GDI';
-                  echo "Hi, " . $name;
-                }
-              </code>
-            </pre>
-				</section>
-				
-				<section>
-					  <h2>But wait! We teach code</h2>
-					  <p>Ruby</p>
-					  <pre>
-              <code contenteditable class ="ruby">
-                def hello_world
-                  @name = 'GDI'
-                  puts "Hi, #{@name}"
-                end
-              </code>
-            </pre>
-				</section>
-               
-         <section>
- 					  <h2>But wait! We teach code</h2>
- 					  <p>Python</p>
- 					  <pre>
-               <code contenteditable class ="python">
-                 def hello_world():
-                   name = "GDI"
-                   print 'Hi, ' + name
-                   return
-               </code>
-             </pre>
- 				</section>
- 				
- 				 <section>
- 					  <h2>But wait! We teach code</h2>
- 					  <p>Java</p>
- 					  <pre>
-               <code contenteditable class ="java">
-                public void helloWorld(){
-                  String name = "GDI";
-                  System.out.println("Hi," + name)
-                }
-               </code>
-             </pre>
- 				</section>
-        
-
-        <!-- Elements entering one at a time-->
-        <section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#/14/1">down</a>.
-						</p>
-						<a href="#/14/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-						<a href="#/14/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-  						<a href="#/14" class="image">
-  							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<a href="#/14/3" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-  						<a href="#/14/1" class="image">
-  							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/14" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-        
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>rvl.io</h2>
-					<p>
-						You know, we are nerds after all and will probably get a kick out of all of this HTML. BUT, if you really don't like writing slides in HTML you can use the online editor <a href="http://www.rvl.io" target="_blank">rvl.io</a>.
-					</p>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-            <a href="?theme=gdicool#/themes">GDI Cool</a> -
-            <a href="?theme=gdilight#/themes">GDI Light</a> -
-            <a href="?theme=gdisunny#/themes">GDI Sunny</a> -
-            <a href="?theme=gdidefault#/themes">Default</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/1">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
-
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Girl Develop It</h3>
-					<h4>Special thanks to: Hakim El Hattab / hakim.se</h4>
-				</section>
-
-			</div>
-  		<footer>
-        <div class="copyright">
-          Official class name here -- Chapter name here (if content modified from original) --
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
-        </div>
-      </footer>
+	<section>
+		<h3>Welcome!</h3>
+		<div class="left-align">
+			<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+			<br/>
+			<p>Some "rules":</p>
+			<ul>
+				<li>We are here for you</li>
+				<li>Every question is important</li>
+				<li>Help each other</li>
+				<li>Have fun!</li>
+			</ul>
 		</div>
+	</section>
+
+	<section>
+	<h3>Welcome!</h3>
+	<div class="left-align">
+		<p>Tell us about yourself.</p>
+		<ul>
+			<li>Who are you?</li>
+			<li>What do you hope to get out of the class?</li>
+			<li>Fun Question Of The Day ... </li>
+		</ul>
+	</div>
+	</section>
+<!-- End Introduction -->
+
+	<section>
+	<h3>What we'll cover today</h3>
+	<div class='left-align'>
+		<ul>
+			<li>What is an object?</li>
+			<li>What are attributes and methods?</li>
+			<li>What is class-based inheritance?</li>
+			<li>What is prototype-based inheritance?</li>
+			<li>How do we create objects using inheritance in JavaScript?</li>
+			<li>How can we extend a prototype in JavaScript?</li>
+			<li>How do we write maintanable code?</li>
+			<li>How can we refactor a website's code with Object-Oriented JavaScript?</li>
+		</ul>
+	</div>
+	</section>
+
+	<section>
+	<h3>Warm up exercises</h3>
+	<div class='left-align'>
+		<p>Goal: Understanding objects</p>
+		<ul>
+			<li>Create an object with a couple properties. For example, you could make a "student" object with the properties "name" and "hometown".</li>
+			<li>Use console.log() to print out a sentence that includes the properties of that object. For example, "[name] is from [hometown]."</li>
+		</ul>
+	</div>
+	</section>
+
+	<section>
+	<h3>Warm up exercises</h3>
+	<div class='left-align'>
+		<p>Goal: Understanding functions</p>
+		<ul>
+			<li>Create a function that takes at least one argument. For example, you could make an "announce" function that alerts "Important announcement:" followed by the argument.</li>
+			<li>Call your function with an argument of your choice. For example, you could announce "Dogs are cute".</li>
+		</ul>
+	</div>
+	</section>
+
+	<section>
+	<h3>Warm up exercises</h3>
+	<div class='left-align'>
+		<p>Goal: Understanding "this"</p>
+		<ul>
+			<li>In HTML, create a link to the website of your choice. Using a JavaScript "onclick" event, make clicking on the link alert the link’s "href".  [Hint: never used the "onclick" event before, and not sure how to use it? Check out w3schools.com for <a href="http://www.w3schools.com/jsref/event_onclick.asp">some documentation and examples</a>]</li>
+		</ul>
+	</div>
+	</section>
+
+	<section>
+	<h3>What is an "Object"?</h3>
+	<div class='left-align'>
+		<p>In computer science, an <strong>object</strong> is a location in memory having a value and possibly referenced by an identifier. An object can be a variable, function, or data structure. [source: Wikipedia]</p>
+		<pre><code contenteditable class='javscript'>
+	var carObject = {
+	    make: 'Volkswagen',
+	    model: 'Rabbit',
+	    drive: function() {
+	        // Code that makes car go forward
+	    }
+	};
+		</code></pre>
+	</div>
+	</section>
+
+	<section>
+	<h3>Attributes and Methods</h3>
+	<div class='left-align'>
+		<p>When we talk about objects, we're interested in two main concepts:</p>
+		<ul>
+			<li class='fragment'><strong>Attributes</strong> - object characteristics</li>
+			<li class='fragment'><strong>Methods</strong> - object functionality</li>
+		</ul>
+		<pre class='fragment'><code contenteditable class='javscript'>
+	var carObject = {
+	    make: 'Volkswagen',    // attribute
+	    model: 'Rabbit',       // attribute
+	    drive: function() {    // method
+	        // Code that makes car go forward
+	    }
+	};
+		</code></pre>
+	</div>
+	</section>
+
+	<section>
+		<h3>Group exercise: Shapes</h3>
+		<div class='left-align'>
+			<p>Think about these geometric shapes:</p>
+		</div>
+		<br/>
+		<p>circle, square, rectangle, star, rhombus, triangle</p>
+		<br/>
+		<div class='left-align'>
+		<ul>
+			<li>What are some <strong>attributes</strong> shared by <em>all</em> shapes?</li>
+			<li>What are some <strong>methods</strong> that can be applied to <em>all</em> shapes?</li>
+			<li>Are there any attributes or methods that are unique to <em>only one</em> shape? ... to <em>some</em> shapes?</li>
+		</ul>
+	</section>
+
+	<section>
+		<h3>Class-based inheritance</h3>
+		<div class='left-align'>
+			<p>Imagine going shopping for a new car.</p>
+			<ul>
+				<li class='fragment'>You go to the dealer with a concept of a "car" is.</li>
+				<li class='fragment'>You find a particular car with qualities you like.</li>
+				<li class='fragment'>You like the way it handles and drives.</li>
+				<li class='fragment'>You purchase this particular car.</li>
+			</ul>
+			<br/>
+			<br/>
+			<p class='fragment'>In object-oriented terms, we say that you have purchased an <strong>instance</strong> of the <strong>class of objects</strong> known as <strong>cars</strong>.</p>
+		</div>
+	</section>
+
+	<section>
+		<h3>Prototypal inheritance</h3>
+		<div class='left-align'>
+			<p>Let's imagine another way of shopping for a new car.</p>
+			<ul>
+				<li class='fragment'>You go to the dealer with an old car you already own, and you ask the dealer for a newer model of the same car.</li>
+				<li class='fragment'>The color, make, and model of the car are the same, but the handling is better than your old car.</li>
+				<li class='fragment'>You purchase this particular car.</li>
+			</ul>
+			<br/>
+			<br/>
+			<p class='fragment'>In object-oriented terms, we say that you have purchased an <strong>instance</strong> of a car based off of a <strong>prototype</strong>, from which it <strong>inherited</strong> some attributes and methods.</p>
+		</div>
+	</section>
+
+	<section>
+	<h3>Creating new objects</h3>
+	<div class='left-align'>
+		<p>In JavaScript, we use a <strong>constructor function</strong> to initialize new objects, and we use the <strong>new</strong> keyword to call the constuctor.
+
+		<pre class='fragment'><code contenteditable class='javscript'>
+	// Create a constructor function for new cars
+	function Car() {
+	    // Set attributes of all new cars
+	    this.odometer = 0;
+	}
+
+	var myCar = new Car();
+
+	// myCar can access properties we defined in Car
+	console.log(myCar.odometer);    // 0
+		</code></pre>
+	</div>
+	</section>
+
+	<section>
+	<h3>Adding Variables</h3>
+	<div class='left-align'>
+		<pre><code contenteditable class='javscript'>
+	// Create a constructor function for new cars
+	function Car(make, model, year) {
+	    // Set the given attributes of this object
+	    this.make = make;
+	    this.model = model;
+	    this.year = year;
+
+	    // Set attributes of all new cars, independent of variables
+	    this.odometer = 0;
+	}
+
+	var myCar = new Car('Volkswagen', 'Rabbit', 2006);
+
+	// myCar can access properties we defined in Car
+	console.log(myCar.odometer);    // 0
+	console.log(myCar.make);        // Volkswagen
+		</code></pre>
+	</div>
+	</section>
+
+	<section>
+	<h3>Extending the prototype</h3>
+	<div class='left-align'>
+		<p>The <strong>prototype</strong> is the collection of all the attributes and methods that the object knows about.</p>
+		<br/>
+		<p>The <strong>prototype</strong> property of an object is used primarily for <strong>inheritance</strong>: methods and attributes on a function's prototype property are <strong>available to instances</strong> of that function.</p>
+
+	</div>
+	</section>
+
+	<section>
+	<h3>Extending the Prototype</h3>
+	<div class='left-align'>
+		<pre><code contenteditable class='javscript'>
+	function Car() {
+	    this.odometer = 0;
+	}
+
+	// Extend the prototype to define methods for new Cars
+	Car.prototype.drive = function() {
+	    this.odometer = this.odometer + 1;
+	};
+
+	// Instantiate a new Car
+	var myCar = new Car();
+
+	// myCar can access methods defined in the prototype
+	console.log(myCar.odometer);    // 0
+	myCar.drive();
+	console.log(myCar.odometer);    // 1
+		</code></pre>
+	</div>
+	</section>
+
+	<section>
+	<h3>Pro style tip</h3>
+	<div class='left-align'>
+		<p>It's common practice for constructor function names to start with an <strong>uppercase</strong> letter.</p>
+
+		<p>It's common practice for regular function names to start with a <strong>lowercase</strong> letter.</p>
+
+		<pre class='fragment'><code contenteditable class='javscript'>
+	// capitalized function "Car"? This must be a constructor
+	function Car() {
+	    this.odometer = 0;
+	}
+
+	// lowercase function "drive"? This must be a regular function
+	Car.prototype.drive = function() {
+	    this.odometer = this.odometer + 1;
+	};
+		</code></pre>
+	</div>
+	</section>
+
+	<section>
+	<h3>Putting it all together</h3>
+	<div class='left-align'>
+		<pre><code contenteditable class='javscript'>
+	// Create a constructor function for new cars
+	function Car(make, model, year) {
+	    this.make = make;
+	    this.model = model;
+	    this.year = year;
+
+	    this.odometer = 0;
+	}
+
+	// Extend the prototype to define methods for new cars
+	Car.prototype.drive = function() {
+	    this.odometer = this.odometer + 1;
+	};
+
+	// Instantiate a new car
+	var myCar = new Car('Volkswagen', 'Rabbit', 2006);
+		</code></pre>
+	</div>
+	</section>
+
+	<section>
+	<h3>Coding exercise 1</h3>
+	<div class='left-align'>
+		<p>Let's make our own constructors and objects! We'll be using an exercise put together by GDI Chicago:</p>
+		<br />
+		<div><a target='_blank' href='http://bit.ly/oojs_ex_1'>http://bit.ly/oojs_ex_1</a></div>
+	</div>
+	</section>
+
+	<section>
+	<h3>Extending objects</h3>
+	<div class='left-align'>
+		<p>Suppose you wanted an easy way to talk about different types of cars.</p>
+		<ul>
+			<li>All cars start with a make, model, year, and odometer.
+			<li>Sedan-type cars have 4 doors
+			<li>Hatchback-type cars can have 3 doors or 5 doors
+		</ul>
+	</div>
+	</section>
+
+	<section>
+	<h3>Creating a hatchback</h3>
+	<div class='left-align'>
+		<p>We can create a constructor function for each sub-type of Car that inherits attributes and methods from Car.</p>
+		<pre><code contenteditable class='javscript'>
+	// Assume Car() is defined as before
+	function Hatchback(make, model, year, doors) {
+	    // Call the Car constructor on the attributes
+	    // Important: "this" is the first argument
+	    Car.call(this, make, model, year);
+
+	    // Set Hatchback-specific properties
+	    this.doors = doors;
+	}
+
+	// Tell the Hatchback to extend the Car object
+	Hatchback.prototype = Object.create(Car.prototype);
+		</code></pre>
+	</div>
+	</section>
+
+	<section>
+	<h3>Creating a hatchback</h3>
+	<div class='left-align'>
+		<p>We can also create methods specific to Hatchback.</p>
+		<pre><code contenteditable class='javscript'>
+	function Hatchback(make, model, year, doors) {
+	    Car.call(this, make, model, year);
+	    this.doors = doors;
+	}
+
+	Hatchback.prototype = Object.create(Car.prototype);
+
+	// Now add a Hatchback-specific function
+	Hatchback.prototype.openHatch = function() {
+	    console.log('You opened the hatch!');
+	}
+
+	var myHatch = new Hatchback('Volkswagen', 'Rabbit', 2006, 3);
+
+	myHatch.drive();
+	myHatch.openHatch();
+
+		</code></pre>
+	</div>
+	</section>
+
+	<section>
+	<h3>Substitutability</h3>
+	<div class='left-align'>
+	<p><strong>Substitutability</strong> is a principle of object-oriented programming introduced by BarbaraLiskov in a 1987 conference keynote entitled "Data abstraction and hierarchy".</p>
+	<br/>
+	<p>In a computer program, if S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of that program.</p>
+	</div>
+	</section>
+
+	<section>
+	<h3>Coding exercise 2</h3>
+	<div class='left-align'>
+		<p>Let's extend our Video to make a MusicVideo! We'll be using another exercise put together by GDI Chicago:</p>
+		<br />
+		<div><a target='_blank' href='http://bit.ly/oojs_ex_2'>http://bit.ly/oojs_ex_2</a></div>
+	</div>
+	</section>
+
+	<section>
+	<h3>Uses for object-oriented programming</h3>
+	<div class='left-align'>
+		<ul>
+			<li class='fragment'>Model physical concepts more clearly in your code
+			<li class='fragment'>Make your code easier to read
+			<li class='fragment'>Create code that is more easily maintainable and reusable
+		</ul>
+	</div>
+	</section>
 
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+	<section>
+	<h3>Maintainable code</h3>
+	<div class='left-align'>
+		<p>When creating an object using our Car constructor, we have to pass in our arguments in a very specific order: make, then model, then year.</p>
+		<pre class='fragment'><code contenteditable class='javscript'>
+	var myCar = new Car('Volkswagen', 'Rabbit', 2006);
+		</code></pre>
+		<p class='fragment'>This is annoying and hard to maintain.</p>
+		<br/>
+		<p class='fragment'>There is a better way.</p>
+	</div>
+	</section>
 
-		<script>
+	<section>
+	<h3>A single argument</h3>
+	<div class='left-align'>
+		<p>Replace your <strong>list</strong> of arguments with a <strong>single</strong> argument.</p>
+		<pre><code contenteditable class='javscript'>
+	// The better way
+	function Car(args) {
+	    this.make = args.make;
+	    this.model = args.model;
+	    this.year = args.year;
+	}
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+	// Instantiate your object
+	// NOTE: You can now list the arguments in any order!
+	var myCar = new Car({
+	    model: 'Rabbit',
+	    year: 2006,
+	    make: 'Volkswagen'
+	});
+		</code></pre>
+	</div>
+	</section>
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+	<section>
+	<h3>Optional default values</h3>
+	<div class='left-align'>
+		<p>You can also provide <strong>default values</strong> for your arguments within the constructor.</p>
+		<pre><code contenteditable class='javscript'>
+	// Now, with defaults! 
+	function Car(args) {
+	    args = args || {};
+	    this.make = args.make || 'Unknown';
+	    this.model = args.model || 'Unknown';
+	    this.year = args.year || 0;
+	}
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true },
-                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+	// Instantiate your object
+	// NOTE: Now there's a backup if you don't know a value
+	var myCar = new Car({
+	    make: 'Volkswagen',
+	    year: 2006
+	});
+		</code></pre>
+	</div>
+	</section>
 
-		</script>
+	<section>
+	<h3>Coding exercise 3</h3>
+	<div class='left-align'>
+		<p>Let's clean up our constructors using what we learned! We'll be using another exercise put together by GDI Chicago:</p>
+		<br />
+		<div><a target='_blank' href='http://bit.ly/oojs_ex_3'>http://bit.ly/oojs_ex_3</a></div>
+	</div>
+	</section>
 
-	</body>
+	<section>
+	<h3>Building real websites</h3>
+	<div class='left-align'>
+		<p>You can create objects that know how to interact with your website.</p>
+
+		<br />
+		<div><a target='_blank' href='http://bit.ly/oojs_example'>http://bit.ly/oojs_example</a></div>
+
+		<br />
+		<p>In a real-world situation, you would probably create your car objects using data imported from a database!</p>
+
+	</div>
+	</section>
+
+	<section>
+	<h3>Refactoring</h3>
+	<div class='left-align'>
+		<p>Once your website code is working correctly, it's a good idea to go back and <strong>refactor</strong> it.  Refactoring is a process developers use to restructure their existing code to make it easier to read.</p>
+		<br/>
+		<p class='fragment'>Although it takes time to refactor your code now, right now is when you're most familiar with what you wrote.</p>
+	</div>
+	</section>
+
+	<section>
+	<h3>Coding exercise 4</h3>
+	<div class='left-align'>
+		<p>Let's refactor some JavaScript using objects! We'll be using another exercise put together by GDI Chicago:</p>
+		<br />
+		<div><a target='_blank' href='http://bit.ly/oojs_ex_4'>http://bit.ly/oojs_ex_4</a></div>
+	</div>
+	</section>
+
+<!-- Outro -->
+	<section>
+		<h3>Regroup &amp; Recap</h3>
+		<ul>
+			<li>What did you work on?</li>
+			<li>What was the most challenging part?</li>
+			<li>What did you learn?</li>
+		</ul>
+	</section>
+
+	<section>
+	<h3>What's next?</h3>
+	<div class='left-align'>
+		<ul>
+			<li class='fragment'>Lots of practice!</li>
+			<li class='fragment'>Intro to Model-View-Controller (MVC) frameworks
+				<ul>
+					<li>Your data goes in the "model"</li>
+					<li>The way to display that data goes in the "view"</li>
+					<li>The model and view talk to each other and your server-side data using the "controller"</li>
+				</ul>
+			</li>
+			<li class='fragment'>Intro to Backbone, a particular MVC framework that provides an amazing infrastructure for routine tasks like message passing, event handling, and working with multiple models</li>
+		</ul>
+	</div>
+	</section>
+
+	<section>
+		<h3>Thank you for attending!</h3>
+		<p>Please help us make this class better by completing this short survey:</p>
+		<br/>
+		<div><a target='_blank' href='http://bit.ly/GDI-OOjs'>http://bit.ly/GDI-OOjs</a></div>
+	</section>
+
+	<!-- End of slides -->
+</div>
+
+<footer>
+	<div class="copyright">
+		Intro to Object Oriented JavaScript  -- Girl Develop It Philly --
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+	</div>
+</footer>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+
+</script>
+
+</body>
 </html>
